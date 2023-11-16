@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+main(){
+
+  //Declaração de variavel
+  int y = 10, x = 20, *pX, *pY;
+  pY = &y; 
+  pX = &x;
+
+  /*if(pY > pX){
+    printf("Endereco Y vem primeiro");
+  }else{
+    printf("Endereco X vem primeiro");
+  }*/
+
+  if(*pY > *pX){
+    printf("Y e Maior");
+  }else{
+    printf("X e Maior");
+  }
+  
+}
