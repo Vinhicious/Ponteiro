@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+main(){
+
+  //Declaração de variavel
+  int x = 10;
+  //Declação do ponteiro
+  int *p;
+  int *p2;
+
+  p = &x;
+  //p2 = &x;
+  p2 = p;
+
+  (*p)+= 10;
+
+  printf("Valor da varialvel x: %d", x);
+
+  printf("\nConteudo da varialvel x atraves de p2: %d", *p2);
+  
+}
