@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+main(){
+
+  //Declaração de variavel
+  int numero;
+  numero = 10;
+
+  int *ponteiro;//variavel que guarda endereco de memoria
+  float *x = NULL;
+  double *y;
+  struct num *p;
+
+  //inicializacao do ponteiro
+  ponteiro = &numero;
+
+  printf("\nconteudo do ponteiro x: %d", x);
+  
+  printf("\n\nEndereco de memoria da variavel numero: %d", &numero);
+
+  printf("\nEndereco de memoria da variavel ponteiro: %d", &ponteiro);
+  
+  printf("\nConteudo da variavel ponteiro: %d", ponteiro);
+
+  //manipulando a variavel atraves do ponteiro
+
+  printf("\nConteudo da variavel numero apresentada atraves do ponteiro: %d", *ponteiro);
+
+  *ponteiro = 33;//alteracao do conteudo da variavel que o ponteiro faz referencia
+
+  printf("\nConteudo da variavel numero: %d", numero);
+  printf("\nConteudo da variavel numero apresentada atraves do ponteiro: %d", *ponteiro);
+  
+}
