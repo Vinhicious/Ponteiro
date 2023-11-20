@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct{
+  char nome[30];
+  int idade;
+  float media;
+}Estudante;
+
+Estudante* cadastrar(int totalEstudantes){
+  Estudante *estudantes = (Estudante*)malloc(totalEstudantes * sizeof(Estudante));
+  if(estudantes == NULL){
+    return NULL;
+  }
+  for(int i = 0; i < totalEstudantes; i++){
+    printf("\nDigite o nome do estudante: ");
+    scanf("%[^\n]", estudantes->nome);
+    printf("\nDigite a idade: ");
+    scanf("%d", &estudantes->idade);
+    printf("\nDigite a media: ");
+    scanf("%f", &estudantes->media);
+  }
+  return estudantes;  
+}
+
+void mostrar(Estudante *estudantes, int totalEstudantes){
+  for(int i = 0; i < totalEstudantes; i++){
+    printf("\nNome: %s", estudantes->nome);
+    printf("\nIdade: %d", estudantes->idade);
+    printf("\nMedia: %f", estudantes->media);
+  }
+}
+
+int main(){
+  Estudante *estudantes;
+  int totalEstudantes;
+
+  printf("Quantos estudantes voce deseja cadastra? ");
+  scanf("%d", &totalEstudantes);
+
+  estudantes = cadastrar(totalEstudantes);
+
+  mostrar(estudantes, totalEstudantes);
+
+
+}
