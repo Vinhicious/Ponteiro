@@ -24,6 +24,9 @@ int main(){
   *numero = *numero + *numero2;
 
   printf("\nO valor armazenado no endereço alocade e: %d", *numero);
+  
+  free(numero);
+  free(numero2)
 
   return 0;
 }
