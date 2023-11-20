@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+  char *nome;
+  //alocando espaço para 5 caracteres
+  nome = (char *) malloc(5 * sizeof(char));
+
+  printf("Digite seu nome: ");
+  scanf("%[^\n]", nome);
+
+  printf("\nNome: %s", nome);
+
+  nome = realloc(nome, 10 * sizeof(char));
+
+  scanf("%[^\n]", nome);
+
+  printf("\nNome: %s", nome);
+  
+  free(nome);
+  
+  return 0;
+}
